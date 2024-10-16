@@ -41,7 +41,8 @@ keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
 keymap("n", "<ESC><ESC>", "<cmd>nohlsearch<CR>", opts)
 
 -- Toggle spell checking on/off
-keymap("n", "<leader>z", ":<C-u>setl spell! spell?<CR>", opts)
+-- keymap("n", "<leader>z", ":<C-u>setl spell! spell?<CR>", opts)
+-- use telescope picker instead
 
 -- Better paste
 keymap("v", "p", '"_dP', opts)
@@ -52,4 +53,4 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- Code formatting
-keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
+-- keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)

@@ -15,7 +15,6 @@ vim.opt.smartindent = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.swapfile = false
-vim.opt.termguicolors = true
 vim.opt.timeoutlen = 1000
 vim.opt.undofile = true
 vim.opt.updatetime = 300
@@ -40,12 +39,3 @@ vim.opt.whichwrap:append("<,>,[,],h,l")
 vim.opt.iskeyword:append("-")
 vim.opt.formatoptions:remove({ "c", "r", "o" })
 vim.opt.linebreak = true
-
--- trim ended whitespaces when saved
--- vim.cmd [[autocmd BufWritePre * :%s/\s\+$//ge]]
--- convert tabs into spaces when saved
--- vim.cmd [[autocmd BufWritePre * :%s/\t/  /ge]]
--- start last ended position when started
-vim.cmd(
-  [[autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g`\"" | endif]]
-)
